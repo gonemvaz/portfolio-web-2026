@@ -1,0 +1,19 @@
+.nav { margin-top: clamp(1.5rem, 5vh, 3rem); margin-bottom: auto; }
+.nav ol { display: grid; gap: .2rem; }
+.nav a { display: flex; align-items: center; gap: .9rem; padding: .4rem 0; text-decoration: none; color: var(--muted); white-space: nowrap; transition: color .2s; }
+.nav a::before { content: ""; width: 2rem; height: 1px; background: currentColor; transition: width .3s ease; }
+.nav a:hover::before { width: 3.25rem; }
+.nav a[aria-current="true"] { color: var(--ink); }
+.nav a[aria-current="true"]::before { width: 4.5rem; }
+.nav a:hover, .nav a:focus { color: var(--accent); }
+
+/* Teléfono: el navbar pasa a ser un menú lateral */
+@media (max-width: 860px) {
+  .nav { position: fixed; z-index: 25; top: 0; right: 0; bottom: 0; width: min(78vw, 18rem); margin: 0; padding: calc(5rem + env(safe-area-inset-top, 0px)) max(1.5rem, env(safe-area-inset-right, 0px)) 2rem 1.5rem; background: var(--paper); border-left: 1px solid var(--rule); overflow-y: auto; transform: translateX(100%); visibility: hidden; transition: transform .32s cubic-bezier(.22, .8, .3, 1), visibility 0s linear .32s; }
+  .nav a { padding: .7rem 0; font-size: 1.05rem; }
+  .menu-open .nav { transform: none; visibility: visible; transition: transform .32s cubic-bezier(.22, .8, .3, 1); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .nav a { transition: none; }
+}

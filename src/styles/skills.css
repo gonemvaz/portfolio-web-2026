@@ -1,0 +1,25 @@
+/* Habilidades: la información es una franja diagonal que cruza la foto */
+#habilidades { --tan: .123; --band: 22rem; --center: 46cqh; --drop: calc(100cqw * var(--tan)); container-type: size; position: relative; display: block; overflow: hidden; }
+.hab-layer { position: absolute; inset: 0; overflow: hidden; }
+.hab-top { clip-path: polygon(0 0, 100% 0, 100% calc(var(--center) - var(--band) / 2 + var(--drop) / 2), 0 calc(var(--center) - var(--band) / 2 - var(--drop) / 2)); }
+.hab-bottom { clip-path: polygon(0 calc(var(--center) + var(--band) / 2 - var(--drop) / 2), 100% calc(var(--center) + var(--band) / 2 + var(--drop) / 2), 100% 100%, 0 100%); }
+.hab-photo { position: absolute; left: 0; top: 0; width: 100%; aspect-ratio: 1175 / 1763; background: var(--hab-photo) center / 100% 100% no-repeat; }
+.hab-top .hab-photo { --y: -38cqw; }
+.hab-bottom .hab-photo { --y: calc(100cqh - 139.5cqw); }
+.hab-content { position: absolute; left: 0; right: 0; top: var(--center); transform: translateY(calc(-50% - 1.4rem)); margin: 0 auto; padding-block: 0; gap: .8rem; z-index: 1; }
+.skills { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 2rem; }
+.skills > div { padding-block: .4rem; border-top: 1px solid var(--rule); min-width: 0; }
+.skills .wide { grid-column: 1 / -1; }
+.skills dt { font-size: .82rem; line-height: 1.35; }
+.skills dd { font-size: .95rem; line-height: 1.3; }
+
+@media (max-width: 860px) {
+  #habilidades { container-type: inline-size; overflow: visible; display: flex; flex-direction: column; }
+  .hab-layer { position: relative; inset: auto; flex: none; height: 46cqw; }
+  .hab-top { clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - var(--drop))); }
+  .hab-bottom { order: 2; clip-path: polygon(0 0, 100% var(--drop), 100% 100%, 0 100%); }
+  .hab-bottom .hab-photo { --y: -93.5cqw; }
+  .hab-content { position: static; transform: none; padding-block: 1rem; }
+  .skills { grid-template-columns: minmax(0, 1fr); }
+  .skills .wide { grid-column: auto; }
+}

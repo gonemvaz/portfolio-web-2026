@@ -1,0 +1,9 @@
+[
+  { "group": "Lenguajes", "items": ["Python", "JavaScript", "SQL"] },
+  { "group": "Backend y APIs", "items": ["Django", "Django REST Framework", "FastAPI", "Node.js", "Express"] },
+  { "group": "IA y agentes", "items": ["Google ADK", "Vertex AI Agent Engine", "Dialogflow CX", "MCP", "RAG", "LangGraph", "Gemini", "Claude"], "wide": true },
+  { "group": "Bases de datos", "items": ["PostgreSQL", "MySQL", "MongoDB", "Redis"] },
+  { "group": "Cloud", "items": ["GCP: Cloud Run", "Cloud Functions", "Cloud Storage", "Vertex AI"] },
+  { "group": "DevOps", "items": ["Docker", "Git", "GitHub", "Linux", "Grafana"] },
+  { "group": "Frontend", "items": ["React", "HTML"] }
+]

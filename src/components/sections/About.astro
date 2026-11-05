@@ -1,0 +1,26 @@
+---
+import { getImage } from 'astro:assets';
+import about from '../../data/about.json';
+import cover from '../../assets/portada-mendoza.jpg';
+
+interface Props {
+  section: { id: string; label: string; route: string };
+}
+
+const { section } = Astro.props;
+const photo = await getImage({ src: cover, format: 'avif', quality: 50 });
+---
+<section class="slide has-cover is-active" id={section.id} aria-label={section.label}>
+  <div class="cover">
+    <svg viewBox="0 0 1000 340" role="img" aria-label={about.coverAlt}>
+      <defs><mask id="coverMask" maskUnits="userSpaceOnUse" x="0" y="0" width="1000" height="340">
+        <path fill="#fff" d="M0 0H1000V318C916 334 834 336 750 322C666 308 584 306 500 320C416 334 334 336 250 322C166 308 84 306 0 320Z"/>
+      </mask></defs>
+      <g mask="url(#coverMask)"><image class="cover-photo" style="--y: -70px" x="-100" y="0" width="1100" height="736" preserveAspectRatio="xMidYMid slice" href={photo.src}/></g>
+    </svg>
+  </div>
+  <div class="slide-inner">
+    <div><span class="route">{section.route}</span><p class="thesis">{about.thesis}</p></div>
+    <p class="lead">{about.lead}</p>
+  </div>
+</section>

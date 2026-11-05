@@ -1,0 +1,12 @@
+.contact { display: grid; gap: .85rem; font-size: .92rem; }
+.icons { display: flex; gap: .5rem; }
+.icons a, .icons button { width: 2.5rem; height: 2.5rem; display: grid; place-items: center; color: var(--ink); background: none; border: 1px solid var(--rule); border-radius: 50%; cursor: pointer; padding: 0; transition: border-color .2s; }
+.icons a:hover, .icons a:focus, .icons button:hover, .icons button:focus { color: var(--accent); border-color: var(--accent); }
+.icons svg { width: 1.1rem; height: 1.1rem; fill: currentColor; }
+.contact-text { display: grid; gap: .1rem; color: var(--muted); }
+.contact-text span { overflow-wrap: anywhere; }
+#email { color: var(--ink); user-select: all; }
+
+@media (max-width: 860px) {
+  .contact { padding-block: 1.25rem; border-bottom: 1px solid var(--rule); }
+}

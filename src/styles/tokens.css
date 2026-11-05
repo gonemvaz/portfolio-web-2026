@@ -1,0 +1,18 @@
+/* Colores, tipografías y tiempos compartidos. El modo oscuro sigue al sistema hasta que la persona elige. */
+:root {
+  --paper: #fff7ec;
+  --ink: #1c1a16;
+  --muted: #5f5a50;
+  --rule: rgba(28, 26, 22, .28);
+  --accent: #93032e;
+  --scrim: rgba(0, 0, 0, .35);
+  --body: "General Sans", "Instrument Sans", "Helvetica Neue", Arial, sans-serif;
+  --name: "Zodiak", "Fraunces", Georgia, serif;
+  --slide-time: 760ms;
+  --slide-ease: cubic-bezier(.76, 0, .24, 1);
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) { --paper: #171510; --ink: #f5eee2; --muted: #aba394; --rule: rgba(255, 247, 236, .24); --accent: #d9305a; color-scheme: dark; }
+}
+:root[data-theme="dark"] { --paper: #171510; --ink: #f5eee2; --muted: #aba394; --rule: rgba(255, 247, 236, .24); --accent: #d9305a; color-scheme: dark; }

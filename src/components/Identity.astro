@@ -1,0 +1,7 @@
+---
+import profile from '../data/profile.json';
+---
+<div class="identity">
+  <h1 id="name"><span>{profile.name}</span></h1>
+  <p>{profile.headline.map((line, i) => <>{i > 0 && <br />}{line}</>)}</p>
+</div>

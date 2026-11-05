@@ -1,0 +1,26 @@
+---
+import experience from '../../data/experience.json';
+
+interface Props {
+  section: { id: string; route: string; title?: string };
+}
+
+const { section } = Astro.props;
+---
+<section class="slide" id={section.id} aria-labelledby="h-exp">
+  <div class="slide-inner">
+    <div><span class="route">{section.route}</span><h2 id="h-exp">{section.title}</h2></div>
+    <div class="jobs">
+      {experience.map((job) => (
+        <article class="job">
+          <time>{job.period}</time>
+          <div>
+            <h3>{job.role}</h3>
+            <p class="org">{job.org}</p>
+            <ul>{job.highlights.map((item) => <li>{item}</li>)}</ul>
+          </div>
+        </article>
+      ))}
+    </div>
+  </div>
+</section>

@@ -1,0 +1,8 @@
+node_modules/
+dist/
+.astro/
+
+# Versión original en un solo archivo (referencia local)
+portfolio-gonzalo.html
+
+CLAUDE.md

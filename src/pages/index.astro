@@ -1,0 +1,44 @@
+---
+import Layout from '../layouts/Layout.astro';
+import MenuButton from '../components/MenuButton.astro';
+import Sidebar from '../components/Sidebar.astro';
+import Tools from '../components/Tools.astro';
+import About from '../components/sections/About.astro';
+import Experience from '../components/sections/Experience.astro';
+import Skills from '../components/sections/Skills.astro';
+import Projects from '../components/sections/Projects.astro';
+import sections from '../data/sections.json';
+
+const [about, experience, skills, projects] = sections;
+---
+<Layout>
+  <MenuButton />
+  <div class="page">
+    <div class="frame">
+      <Sidebar />
+      <main class="window" id="stage">
+        <div class="track" id="track">
+          <About section={about} />
+          <Experience section={experience} />
+          <Skills section={skills} />
+          <Projects section={projects} />
+        </div>
+        <Tools />
+      </main>
+    </div>
+  </div>
+</Layout>
+
+<script>
+  import { initTheme } from '../scripts/theme';
+  import { initMenu } from '../scripts/menu';
+  import { initNavigation } from '../scripts/navigation';
+  import { initCopyEmail } from '../scripts/copy-email';
+  import { initFit } from '../scripts/fit';
+
+  initTheme();
+  const menu = initMenu();
+  initNavigation(menu);
+  initCopyEmail();
+  initFit();
+</script>

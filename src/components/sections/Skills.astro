@@ -1,0 +1,24 @@
+---
+import { getImage } from 'astro:assets';
+import skills from '../../data/skills.json';
+import background from '../../assets/habilidades-montana.jpg';
+
+interface Props {
+  section: { id: string; route: string; title?: string };
+}
+
+const { section } = Astro.props;
+const photo = await getImage({ src: background, format: 'avif', quality: 50 });
+---
+<section class="slide" id={section.id} aria-labelledby="h-ski" style={`--hab-photo: url("${photo.src}")`}>
+  <div class="hab-layer hab-top"><div class="cover-photo hab-photo" role="img" aria-label="Montañas nevadas"></div></div>
+  <div class="hab-layer hab-bottom"><div class="cover-photo hab-photo" role="img" aria-label="Edificios de la ciudad al pie de la montaña"></div></div>
+  <div class="slide-inner hab-content" id="habContent">
+    <div><span class="route">{section.route}</span><h2 id="h-ski">{section.title}</h2></div>
+    <dl class="skills">
+      {skills.map((skill) => (
+        <div class={skill.wide ? 'wide' : undefined}><dt>{skill.group}</dt><dd>{skill.items.join(', ')}</dd></div>
+      ))}
+    </dl>
+  </div>
+</section>

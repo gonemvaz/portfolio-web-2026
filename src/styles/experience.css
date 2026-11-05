@@ -1,0 +1,12 @@
+.jobs { display: grid; gap: 1rem; }
+.job { display: grid; grid-template-columns: 10rem minmax(0, 1fr); gap: .2rem 1.25rem; }
+.job time { font-size: .85rem; line-height: 1.6; color: var(--muted); padding-top: .15rem; font-variant-numeric: tabular-nums; }
+.job h3 { font-size: 1.15rem; line-height: 1.3; }
+.job .org { color: var(--muted); font-size: .95rem; }
+.job ul { margin-top: .35rem; display: grid; gap: .25rem; font-size: .96rem; }
+.job li { padding-left: .95rem; position: relative; }
+.job li::before { content: ""; position: absolute; left: 0; top: .72em; width: .45rem; height: 1px; background: var(--muted); }
+
+@media (max-width: 860px) {
+  .job { grid-template-columns: minmax(0, 1fr); }
+}

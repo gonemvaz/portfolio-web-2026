@@ -1,0 +1,25 @@
+---
+import projects from '../../data/projects.json';
+
+interface Props {
+  section: { id: string; route: string; title?: string };
+}
+
+const { section } = Astro.props;
+---
+<section class="slide" id={section.id} aria-labelledby="h-pro">
+  <div class="slide-inner">
+    <div><span class="route">{section.route}</span><h2 id="h-pro">{section.title}</h2></div>
+    <div>
+      {projects.map((project) => (
+        <article class="case">
+          <h3>{project.title}</h3>
+          <p>{project.summary}</p>
+          {project.flow && (
+            <div class="flow" aria-label="Flujo del sistema">{project.flow.map((step) => <span>{step}</span>)}</div>
+          )}
+        </article>
+      ))}
+    </div>
+  </div>
+</section>

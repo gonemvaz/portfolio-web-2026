@@ -1,0 +1,11 @@
+{
+  "name": "Gonzalo Vazquez",
+  "headline": ["Backend Developer (Python)", "Agentes de IA y MCP"],
+  "description": "Gonzalo Vazquez, Backend Developer (Python) especializado en agentes de IA y MCP.",
+  "email": "vazquez.gonzaloemanuel@gmail.com",
+  "location": "Ciudad de Mendoza, Argentina",
+  "links": [
+    { "label": "LinkedIn", "icon": "linkedin", "href": "https://www.linkedin.com/in/gonzalo-vazquez-casas" },
+    { "label": "GitHub", "icon": "github", "href": "https://github.com/gonemvaz012" }
+  ]
+}

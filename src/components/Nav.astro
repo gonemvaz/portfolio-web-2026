@@ -1,0 +1,8 @@
+---
+import sections from '../data/sections.json';
+---
+<nav class="nav" id="siteNav" aria-label="Secciones">
+  <ol id="navlist">
+    {sections.map((s, i) => <li><a href={`#${s.id}`} aria-current={i === 0 ? 'true' : undefined}>{s.label}</a></li>)}
+  </ol>
+</nav>

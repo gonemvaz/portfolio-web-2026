@@ -1,0 +1,20 @@
+---
+import Icon from './Icon.astro';
+import profile from '../data/profile.json';
+---
+<div class="contact">
+  <div class="icons">
+    {profile.links.map((link) => (
+      <a href={link.href} target="_blank" rel="noopener" aria-label={link.label}>
+        <Icon name={link.icon as 'linkedin' | 'github'} />
+      </a>
+    ))}
+    <button id="copy" type="button" aria-label="Copiar email" title="Copiar email">
+      <Icon name="mail" />
+    </button>
+  </div>
+  <div class="contact-text">
+    <span id="email">{profile.email}</span>
+    <span id="copyState" aria-live="polite">{profile.location}</span>
+  </div>
+</div>

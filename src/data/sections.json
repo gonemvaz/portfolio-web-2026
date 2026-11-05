@@ -1,0 +1,6 @@
+[
+  { "id": "acerca", "label": "Acerca de mí", "route": "/acerca-de-mi" },
+  { "id": "experiencia", "label": "Experiencia", "route": "/experiencia", "title": "Dónde trabajé" },
+  { "id": "habilidades", "label": "Habilidades", "route": "/habilidades", "title": "Con qué trabajo" },
+  { "id": "proyectos", "label": "Proyectos", "route": "/proyectos", "title": "Qué construí" }
+]

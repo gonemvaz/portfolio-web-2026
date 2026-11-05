@@ -1,0 +1,24 @@
+[
+  {
+    "period": "Dic 2023 – May 2026",
+    "role": "Back-end Developer",
+    "org": "AureoInnova (Unobot), clientes en España y Argentina",
+    "highlights": [
+      "Único desarrollador responsable de los agentes de dos clínicas, con miles de conversaciones gestionadas.",
+      "Migré agentes de Dialogflow CX a una arquitectura multiagente con Google ADK.",
+      "Desarrollé servicios en Django y Express para procesar tráfico de llamadas de concesionarias."
+    ]
+  },
+  {
+    "period": "Ago 2022 – Jun 2023",
+    "role": "QA Automation",
+    "org": "Freelance",
+    "highlights": ["Automaticé pruebas E2E con Java, Selenium WebDriver, Cucumber y TestNG."]
+  },
+  {
+    "period": "Feb 2022 – Sep 2022",
+    "role": "Front-end Developer",
+    "org": "Semillero LATAM (bootcamp)",
+    "highlights": ["Desarrollé con JavaScript el front-end de un proyecto de impacto social, en un equipo ágil."]
+  }
+]

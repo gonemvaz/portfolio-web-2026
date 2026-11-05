@@ -1,0 +1,5 @@
+.case { display: grid; gap: .35rem; padding-block: .95rem; border-top: 1px solid var(--rule); min-width: 0; }
+.case h3 { font-size: 1.25rem; line-height: 1.25; }
+.case p { color: var(--muted); font-size: .97rem; }
+.flow { display: flex; flex-wrap: wrap; gap: .25rem .5rem; font-size: .85rem; line-height: 1.5; }
+.flow span + span::before { content: "\2192"; margin-right: .5rem; color: var(--muted); }

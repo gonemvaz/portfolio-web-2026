@@ -1,0 +1,15 @@
+[
+  {
+    "title": "Agentes multiagente para clínicas",
+    "summary": "Migré los agentes a subagentes especializados con manejo de estado. Mejoró la comprensión del contexto y se redujeron las alucinaciones y las derivaciones.",
+    "flow": ["Paciente", "Agente ADK", "Subagentes", "Tools y MCP", "Sistema de turnos"]
+  },
+  {
+    "title": "Servidor MCP para un sistema de turnos",
+    "summary": "Desarrollé un servidor MCP para uno de los sistemas de turnos que integré en los agentes."
+  },
+  {
+    "title": "Servicios backend para call centers",
+    "summary": "Registro automático de llamadas perdidas para devolverlas después y campañas generadas a partir de eventos de llamadas. Desplegado con Docker y monitoreado con Grafana."
+  }
+]

@@ -1,0 +1,6 @@
+/* Portada: foto pegada arriba del main, con el borde inferior ondulado */
+.has-cover { display: block; }
+.has-cover .slide-inner { margin: 0 auto; padding-top: clamp(1rem, 2.6vh, 1.5rem); }
+.cover svg { display: block; width: 100%; height: auto; }
+.thesis { font-size: clamp(1.7rem, 2.8vw, 2.5rem); font-weight: 700; line-height: 1.1; letter-spacing: -.015em; text-wrap: balance; margin-top: .55rem; color: var(--accent); }
+.lead { color: var(--muted); font-size: 1.05rem; max-width: 38rem; }
