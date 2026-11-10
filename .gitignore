@@ -6,3 +6,6 @@ dist/
 portfolio-gonzalo.html
 
 CLAUDE.md
+infra/terraform.tfvars
+infra/.terraform/
+*.tfstate*

@@ -1,0 +1,33 @@
+name: CI
+on:
+  pull_request:
+    branches: [staging, main]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with: { node-version: 22, cache: npm }
+      - run: npm ci
+      - run: npx astro check
+      - run: npm run build
+
+      # "Test de deploy": se construye el contenedor real, se levanta y se prueba
+      - run: docker build -t portfolio:test .
+      - run: docker run -d -p 8080:8080 --name site portfolio:test
+      - name: Smoke test
+        run: |
+          for i in $(seq 1 10); do curl -fs http://localhost:8080/ > page.html && break; sleep 1; done
+          grep -q "Gonzalo Vazquez" page.html
+          ASSET=$(grep -o '/_astro/[^"]*\.css' page.html | head -1)
+          curl -fsI "http://localhost:8080$ASSET"
+
+  source-branch:
+    runs-on: ubuntu-latest
+    steps:
+      - name: A main solo se llega desde staging
+        if: github.base_ref == 'main' && github.head_ref != 'staging'
+        run: echo "Los PRs a main tienen que venir de staging" && exit 1
+      - run: echo ok
