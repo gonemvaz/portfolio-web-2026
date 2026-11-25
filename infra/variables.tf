@@ -7,5 +7,5 @@ variable "region" {
 
 variable "github_repo" {
   type    = string
-  default = "gonemvaz012/portfolio-web-2026"
+  default = "gonemvaz/portfolio-web-2026"
 }
