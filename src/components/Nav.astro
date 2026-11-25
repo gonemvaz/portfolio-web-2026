@@ -1,5 +1,8 @@
 ---
-import sections from '../data/sections.json';
+import allSections from '../data/sections.json';
+
+// Las secciones con "hidden": true en sections.json no aparecen en el menú.
+const sections = allSections.filter((s) => !('hidden' in s && s.hidden));
 ---
 <nav class="nav" id="siteNav" aria-label="Secciones">
   <ol id="navlist">
