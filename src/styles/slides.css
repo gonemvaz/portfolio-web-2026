@@ -3,7 +3,7 @@
 .slide { height: 100%; overflow-y: auto; overscroll-behavior: contain; display: flex; opacity: 0; transition: opacity 320ms ease; }
 .slide.is-active { opacity: 1; transition: opacity 560ms ease 200ms; }
 .slide-inner { width: 100%; max-width: 50rem; margin: auto; padding: clamp(1.5rem, 4vh, 3rem) clamp(1.5rem, 4vw, 3.5rem) 2.5rem; display: grid; grid-template-columns: minmax(0, 1fr); gap: clamp(1rem, 2.6vh, 1.75rem); }
-.route { font-size: .85rem; line-height: 1; color: var(--muted); }
+.route { font-size: .85rem; line-height: 1; color: var(--ink); }
 .slide h2 { font-size: clamp(1.9rem, 3vw, 2.7rem); line-height: 1.08; letter-spacing: -.015em; text-wrap: balance; margin-top: .55rem; color: var(--accent); }
 
 /* Fotos de portada: entran desde arriba o abajo según la dirección del deslizamiento */

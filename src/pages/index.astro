@@ -10,6 +10,8 @@ import Projects from '../components/sections/Projects.astro';
 import sections from '../data/sections.json';
 
 const [about, experience, skills, projects] = sections;
+// Para volver a mostrar Proyectos, quitar "hidden": true en sections.json.
+const showProjects = !('hidden' in projects && projects.hidden);
 ---
 <Layout>
   <MenuButton />
@@ -21,7 +23,7 @@ const [about, experience, skills, projects] = sections;
           <About section={about} />
           <Experience section={experience} />
           <Skills section={skills} />
-          <Projects section={projects} />
+          {showProjects && <Projects section={projects} />}
         </div>
         <Tools />
       </main>
