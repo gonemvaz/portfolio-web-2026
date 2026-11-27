@@ -32,13 +32,11 @@ const showProjects = !('hidden' in projects && projects.hidden);
 </Layout>
 
 <script>
-  import { initTheme } from '../scripts/theme';
   import { initMenu } from '../scripts/menu';
   import { initNavigation } from '../scripts/navigation';
   import { initCopyEmail } from '../scripts/copy-email';
   import { initFit } from '../scripts/fit';
 
-  initTheme();
   const menu = initMenu();
   initNavigation(menu);
   initCopyEmail();

@@ -1,32 +1,18 @@
-/* Colores, tipografías y tiempos compartidos. El modo oscuro sigue al sistema hasta que la persona elige. */
+/* Colores, tipografías y tiempos compartidos. El sitio solo tiene tema oscuro. */
 :root {
-  --paper: #fff7ec;
-  --ink: #1c1a16;
-  --muted: #5f5a50;
-  --rule: rgba(28, 26, 22, .28);
-  --accent: #0F3D4A;
-  --hover: #1F5F6E;
-  --paper-2: var(--paper);
-  --grain: 0;
+  --paper: #0d1517;
+  --paper-2: #10130D;
+  --ink: #f5f3ef;
+  --muted: #a7aaa6;
+  --rule: rgba(245, 243, 239, .18);
+  --accent: #D42A15;
+  --accent-2: #F2A93B;
+  --hover: #F2A93B;
+  --grain: .07;
   --scrim: rgba(0, 0, 0, .35);
   --body: "General Sans", "Instrument Sans", "Helvetica Neue", Arial, sans-serif;
   --name: "Zodiak", "Fraunces", Georgia, serif;
   --slide-time: 760ms;
   --slide-ease: cubic-bezier(.76, 0, .24, 1);
-  color-scheme: light;
+  color-scheme: dark;
 }
-/* Tema oscuro: los valores se editan solo acá, en este bloque */
-:root {
-  --dark-paper: #0d1517;
-  --dark-paper-2: #10130D;
-  --dark-ink: #f5f3ef;
-  --dark-muted: #a7aaa6;
-  --dark-rule: rgba(245, 243, 239, .18);
-  --dark-accent: #B91E0C;
-  --dark-hover: #F2A93B;
-  --dark-grain: .07;
-}
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) { --paper: var(--dark-paper); --paper-2: var(--dark-paper-2); --ink: var(--dark-ink); --muted: var(--dark-muted); --rule: var(--dark-rule); --accent: var(--dark-accent); --hover: var(--dark-hover); --grain: var(--dark-grain); color-scheme: dark; }
-}
-:root[data-theme="dark"] { --paper: var(--dark-paper); --paper-2: var(--dark-paper-2); --ink: var(--dark-ink); --muted: var(--dark-muted); --rule: var(--dark-rule); --accent: var(--dark-accent); --hover: var(--dark-hover); --grain: var(--dark-grain); color-scheme: dark; }
