@@ -5,4 +5,11 @@ dist/
 # Versión original en un solo archivo (referencia local)
 portfolio-gonzalo.html
 
+# 
+docs/guia-deploy.md
+docs/terraform-cloud-run.md
+
 CLAUDE.md
+infra/terraform.tfvars
+infra/.terraform/
+*.tfstate*

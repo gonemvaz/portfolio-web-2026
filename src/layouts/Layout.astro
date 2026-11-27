@@ -9,14 +9,11 @@ import profile from '../data/profile.json';
     <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
     <title>{profile.name}</title>
     <meta name="description" content={profile.description} />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=general-sans@500,700&f[]=zodiak@701&display=swap" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@1,700&family=Instrument+Sans:wght@500;700&display=swap" />
-    <script is:inline>
-      // Aplica el tema guardado antes de pintar, para que no parpadee.
-      try { var t = localStorage.getItem('theme'); if (t === 'dark' || t === 'light') document.documentElement.setAttribute('data-theme', t); } catch (e) {}
-    </script>
   </head>
   <body>
     <slot />

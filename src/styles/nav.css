@@ -5,7 +5,7 @@
 .nav a:hover::before { width: 3.25rem; }
 .nav a[aria-current="true"] { color: var(--ink); }
 .nav a[aria-current="true"]::before { width: 4.5rem; }
-.nav a:hover, .nav a:focus { color: var(--accent); }
+.nav a:hover, .nav a:focus { color: var(--hover); }
 
 /* Teléfono: el navbar pasa a ser un menú lateral */
 @media (max-width: 860px) {

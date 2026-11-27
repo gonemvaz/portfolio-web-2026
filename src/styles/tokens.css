@@ -1,18 +1,18 @@
-/* Colores, tipografías y tiempos compartidos. El modo oscuro sigue al sistema hasta que la persona elige. */
+/* Colores, tipografías y tiempos compartidos. El sitio solo tiene tema oscuro. */
 :root {
-  --paper: #fff7ec;
-  --ink: #1c1a16;
-  --muted: #5f5a50;
-  --rule: rgba(28, 26, 22, .28);
-  --accent: #93032e;
+  --paper: #0d1517;
+  --paper-2: #10130D;
+  --ink: #f5f3ef;
+  --muted: #a7aaa6;
+  --rule: rgba(245, 243, 239, .18);
+  --accent: #D42A15;
+  --accent-2: #F2A93B;
+  --hover: #F2A93B;
+  --grain: .07;
   --scrim: rgba(0, 0, 0, .35);
   --body: "General Sans", "Instrument Sans", "Helvetica Neue", Arial, sans-serif;
   --name: "Zodiak", "Fraunces", Georgia, serif;
   --slide-time: 760ms;
   --slide-ease: cubic-bezier(.76, 0, .24, 1);
-  color-scheme: light;
+  color-scheme: dark;
 }
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) { --paper: #171510; --ink: #f5eee2; --muted: #aba394; --rule: rgba(255, 247, 236, .24); --accent: #d9305a; color-scheme: dark; }
-}
-:root[data-theme="dark"] { --paper: #171510; --ink: #f5eee2; --muted: #aba394; --rule: rgba(255, 247, 236, .24); --accent: #d9305a; color-scheme: dark; }
