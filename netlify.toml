@@ -1,0 +1,28 @@
+# Deploy en Netlify: main -> producción, staging -> branch deploy, cada PR -> preview.
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+[build.environment]
+  NODE_VERSION = "22"
+
+# Headers de seguridad para todas las páginas.
+# CSP: qué puede cargar la página; cualquier cosa fuera de esta lista se bloquea.
+#   style-src-attr: los style="--y: ..." y style="--hab-photo: ..." del HTML
+#   fuentes: Fontshare (General Sans, Zodiak) y Google Fonts (respaldo)
+[[headers]]
+  for = "/*"
+  [headers.values]
+    Content-Security-Policy = "default-src 'self'; script-src 'self'; style-src-elem 'self' https://api.fontshare.com https://fonts.googleapis.com; style-src-attr 'unsafe-inline'; font-src https://cdn.fontshare.com https://fonts.gstatic.com; img-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'"
+    Strict-Transport-Security = "max-age=31536000"
+    X-Content-Type-Options = "nosniff"
+    X-Frame-Options = "DENY"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "camera=(), microphone=(), geolocation=(), payment=(), usb=()"
+    Cross-Origin-Opener-Policy = "same-origin"
+
+# Astro pone hash en los nombres de /_astro: se pueden cachear para siempre
+[[headers]]
+  for = "/_astro/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
